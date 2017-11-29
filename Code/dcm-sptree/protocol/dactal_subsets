@@ -1,0 +1,5 @@
+subset  0: ['ORN', 'SOR', 'ERI', 'TUP', 'SPE', 'CHO', 'DAS', 'PRO', 'LOX', 'ECH', 'MON', 'MAC', 'GAL']
+subset  1: ['ORN', 'SOR', 'ERI', 'TUP', 'SPE', 'PTE', 'MYO', 'CAN', 'FEL', 'EQU', 'VIC', 'SUS', 'BOS', 'TUR']
+subset  2: ['TUP', 'TAR', 'OTO', 'SPE', 'MIC', 'ERI', 'SOR', 'ORN']
+subset  3: ['TUP', 'TAR', 'OTO', 'SPE', 'MIC', 'PON', 'PAN', 'HOM', 'GOR', 'NEW', 'CAL']
+subset  4: ['TUP', 'TAR', 'OTO', 'SPE', 'MIC', 'OCH', 'ORY', 'CAV', 'MUS', 'RAT', 'DIP']

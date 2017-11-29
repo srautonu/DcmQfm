@@ -1,0 +1,2 @@
+starting.tre --> Initial species tree
+inFile.1 --> Gene tree file
