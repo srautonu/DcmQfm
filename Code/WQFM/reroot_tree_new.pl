@@ -1,9 +1,6 @@
 #!/lusr/bin/perl
 
-#use lib "/projects/sate3/tools/bin/bioPerl-1.5.2/lib/perl5"; 
-#use lib "/usr/share/lib/perl5/"
-#use lib "/home/gene-tree/Gene-Tree/tools/BioPerl-1.6.901/";
-use lib "/home/gene-tree/Gene-Tree/tools/bioPerl-1.5.2/lib/perl5";
+use lib "D:/bioPerl-1.5.2/lib/perl5";
 use Bio::Tree::Tree;
 use IO::String;
 use Bio::TreeIO;
