@@ -8,7 +8,15 @@ Create gene tress scoped to the specified subsets using induced_subtree_from_tax
 quartets
 --------
 
-./quartet-controller <SubSetSpeciesTreeFile> <FileToStoreQuartets>
+Modify one line in "quartet_count.sh" file -- "/projects/sate7/tools/bin/triplets.soda2103".
+Replace the path "/projects/sate7/tools/bin" by indicating your local directory where you saved "triplets.soda2013".
+
+Then run the following command:
+
+quartet-controller.sh <inputFile> <outputFile>
+
+<inputFile>: a file containing the gene trees in newick format.
+<outputFIle>: it will contain all the induced quartets and their frequency.
 
 WQFM
 ----
