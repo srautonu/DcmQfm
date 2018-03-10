@@ -5,6 +5,10 @@ dactal subset creation using prd_decomp.py
 Create separate subset files by running extract_subsets.pl
 Create gene tress scoped to the specified subsets using induced_subtree_from_taxa.py
 
+quartets
+--------
+
+./quartet-controller <SubSetSpeciesTreeFile> <FileToStoreQuartets>
 
 WQFM
 ----
