@@ -1,3 +1,7 @@
+Data
+----
+The starting tree is created using what? [There was some confusion]
+
 dactal (See commands from the paper)
 ------
 
