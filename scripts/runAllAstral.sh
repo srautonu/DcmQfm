@@ -2,7 +2,7 @@
 
 # Command line parameters
 inputFolder=$1
-inputGeneTree=$2
+inputGeneTree=Best.1
 
 scoresFile=astralScore.csv
 

@@ -1,3 +1,28 @@
+for f in $(ls); do
+  for i in `seq 1 20`; do
+    mv $f/R$i/Best.1.tre $f/R$i/mpest.tre 
+  done
+done
+
+
+
+/home/saifur/Research/dcm/run/tmp.Zp6hcn2l9N
+noscale.100g.500b/R10
+
+## Script to check a matching Best.1 in the data set
+# Useful for debugging a result
+for f in ../../data/mammals/*; do
+  for i in `seq 1 20`; do
+    if diff Best.1  $f/R$i/Best.1 >/dev/null 2>&1; then
+      echo "Matched with $f/R$i";
+    fi
+  done
+done
+
+
+
+cut -d ' ' -f 1-
+
 https://github.com/srautonu/DcmQfm.git
 
 
