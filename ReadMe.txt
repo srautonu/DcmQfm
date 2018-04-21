@@ -1,3 +1,5 @@
+python runWMRP_nam.py -i <gene tree file> -o <outputfile> -d <output-directory> -r true
+
 for f in $(ls); do
   for i in `seq 1 20`; do
     mv $f/R$i/Best.1.tre $f/R$i/mpest.tre 

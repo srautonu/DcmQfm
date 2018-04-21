@@ -41,7 +41,7 @@ def main(argv):
     iters = 100
     logFile = ""
     best = None
-    directory = "/projects/sate2/laustin/temp/"
+    directory = None
     weighted = False
     regular = False
     
@@ -137,7 +137,7 @@ def main(argv):
 
 
     
-    pipe = Popen("paup -n %s.mrp" % prefix, shell = True, stdout = PIPE, stderr = PIPE)
+    pipe = Popen("./bin/paup -n %s.mrp" % prefix, shell = True, stdout = PIPE, stderr = PIPE)
     (out, err) = pipe.communicate()
     
     trees = None
@@ -156,8 +156,8 @@ def main(argv):
         os.remove(prefix + ".smrp")
         os.remove(prefix + ".mmrp")
         os.remove(prefix + ".tre")
-        if not weighted:
-            os.remove(prefix + ".tre.nex")
+#        if not weighted:
+#            os.remove(prefix + ".tre.nex")
         os.remove(prefix + ".mrp")
     except:
         print "Error removing files\n"
