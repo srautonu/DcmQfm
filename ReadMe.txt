@@ -4,6 +4,11 @@ for f in $(ls); do
   done
 done
 
+for i in `seq 1 20`; do
+  ./fnTrees.sh ../data/mammals/true.tre ../results/MRP_15_01/noscale.200g.500b/R$i/ 
+done
+
+
 
 
 /home/saifur/Research/dcm/run/tmp.Zp6hcn2l9N
