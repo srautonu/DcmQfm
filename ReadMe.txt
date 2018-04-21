@@ -25,6 +25,10 @@ for f in ../../data/mammals/*; do
 done
 
 
+Running MRP:
+python runWMRP_nam.py -i <gene tree file> -o <outputfile> -d <output-directory> -r true
+
+
 
 cut -d ' ' -f 1-
 
