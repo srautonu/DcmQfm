@@ -6,6 +6,7 @@ export PATH=$PATH:$HOME/Research/dcm/standard-RAxML-master
 # Command line parameters
 expFolder=$1
 startingTree=$2
+trueTree=$3
 
 geneTree=Best.1
 
@@ -64,5 +65,8 @@ done
 
 # Score all the newly generated species trees
 ./scoreTrees.sh $expFolder $geneTree
+
+# Calculate the Fn score
+./fnTrees.sh $expFolder $trueTree
 
 

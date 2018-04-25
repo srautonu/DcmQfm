@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Command line parameters
-trueTree=$1
-expFolder=$2
+expFolder=$1
+trueTree=$2
 
 fnFile=$expFolder/fn.csv
 

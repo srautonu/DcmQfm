@@ -1,0 +1,200 @@
+==== R1 ====
+Iteration,nQuartets
+0,10008442
+1,10018088
+2,9927326
+3,10018088
+4,9927326
+5,10018088
+Iteration,nQuartets
+ASTRAL,10018088
+==== R2 ====
+Iteration,nQuartets
+0,9956191
+1,9966771
+2,9966771
+3,9966771
+4,9966771
+5,9966771
+Iteration,nQuartets
+ASTRAL,9966771
+==== R3 ====
+Iteration,nQuartets
+0,9996076
+1,9919638
+2,10021859
+3,10017156
+4,10021810
+5,10021810
+Iteration,nQuartets
+ASTRAL,10021859
+==== R4 ====
+Iteration,nQuartets
+0,9888624
+1,9892330
+2,9892330
+3,9892330
+4,9892330
+5,9892330
+Iteration,nQuartets
+ASTRAL,9896186
+==== R5 ====
+Iteration,nQuartets
+0,10049105
+1,10066125
+2,10066125
+3,10066125
+4,10066125
+5,10066125
+Iteration,nQuartets
+ASTRAL,10066567
+==== R6 ====
+Iteration,nQuartets
+0,9979930
+1,9887624
+2,9840559
+3,9887573
+4,9840559
+5,9887573
+Iteration,nQuartets
+ASTRAL,9980371
+==== R7 ====
+Iteration,nQuartets
+0,10041854
+1,9624064
+2,9949003
+3,9949003
+4,9949003
+5,9949003
+Iteration,nQuartets
+ASTRAL,10046251
+==== R8 ====
+Iteration,nQuartets
+0,9919118
+1,9921755
+2,9542319
+3,9839501
+4,9839501
+5,9839501
+Iteration,nQuartets
+ASTRAL,9933142
+==== R9 ====
+Iteration,nQuartets
+0,9999198
+1,10013881
+2,10014664
+3,10014664
+4,10014664
+5,10014664
+Iteration,nQuartets
+ASTRAL,10021202
+==== R10 ====
+Iteration,nQuartets
+0,10086475
+1,10093649
+2,10094324
+3,10006894
+4,10094324
+5,10094324
+Iteration,nQuartets
+ASTRAL,10094873
+==== R11 ====
+Iteration,nQuartets
+0,9955913
+1,8374145
+2,9875979
+3,9875979
+4,9875979
+5,9875979
+Iteration,nQuartets
+ASTRAL,9963358
+==== R12 ====
+Iteration,nQuartets
+0,9909681
+1,9907262
+2,9907262
+3,9907262
+4,9907262
+5,9907262
+Iteration,nQuartets
+ASTRAL,9909992
+==== R13 ====
+Iteration,nQuartets
+0,10067931
+1,10083043
+2,10083043
+3,10083043
+4,10083043
+5,10083043
+Iteration,nQuartets
+ASTRAL,10083043
+==== R14 ====
+Iteration,nQuartets
+0,10223860
+1,10237882
+2,10237882
+3,9849384
+4,10151920
+5,10151920
+Iteration,nQuartets
+ASTRAL,10239226
+==== R15 ====
+Iteration,nQuartets
+0,10056796
+1,10071839
+2,10071839
+3,10071839
+4,10071839
+5,10071839
+Iteration,nQuartets
+ASTRAL,10071839
+==== R16 ====
+Iteration,nQuartets
+0,10005562
+1,8390422
+2,9892672
+3,9920714
+4,9920714
+5,9920714
+Iteration,nQuartets
+ASTRAL,10006573
+==== R17 ====
+Iteration,nQuartets
+0,9933153
+1,9942686
+2,9942686
+3,9942686
+4,9942686
+5,9942686
+Iteration,nQuartets
+ASTRAL,9942686
+==== R18 ====
+Iteration,nQuartets
+0,9833942
+1,9834528
+2,9745826
+3,9745826
+4,9745826
+5,9745826
+Iteration,nQuartets
+ASTRAL,9835040
+==== R19 ====
+Iteration,nQuartets
+0,10043625
+1,10053568
+2,9970882
+3,9970882
+4,9970882
+5,9970882
+Iteration,nQuartets
+ASTRAL,10057419
+==== R20 ====
+Iteration,nQuartets
+0,9971305
+1,9907703
+2,9906453
+3,9993865
+4,9943338
+5,9943338
+Iteration,nQuartets
+ASTRAL,9994025
