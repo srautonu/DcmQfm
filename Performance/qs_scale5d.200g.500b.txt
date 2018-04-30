@@ -28,25 +28,7 @@ Iteration,nQuartets
 5,7957218
 Iteration,nQuartets
 ASTRAL,7959588
-==== R4 ====
-Iteration,nQuartets
-0,1,2,3,4,5,Iteration,nQuartets
-ASTRAL,==== R5 ====
-Iteration,nQuartets
-0,1,2,3,4,5,Iteration,nQuartets
-ASTRAL,==== R6 ====
-Iteration,nQuartets
-0,1,2,3,4,5,Iteration,nQuartets
-ASTRAL,==== R7 ====
-Iteration,nQuartets
-0,1,2,3,4,5,Iteration,nQuartets
-ASTRAL,==== R8 ====
-Iteration,nQuartets
-0,1,2,3,4,5,Iteration,nQuartets
-ASTRAL,==== R9 ====
-Iteration,nQuartets
-0,1,2,3,4,5,Iteration,nQuartets
-ASTRAL,==== R10 ====
+==== R10 ====
 Iteration,nQuartets
 0,7777436
 1,7731968
