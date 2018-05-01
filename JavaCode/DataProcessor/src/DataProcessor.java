@@ -5,42 +5,45 @@ import java.io.IOException;
 //
 // Model conditions are as follows:
 //
-// java DataProcessor noscale.100g.500b  > noscale.100g.500b.csv
-// java DataProcessor noscale.200g.1000b > noscale.200g.1000b.csv
-// java DataProcessor noscale.200g.250b  > noscale.200g.250b.csv
-// java DataProcessor noscale.200g.500b  > noscale.200g.500b.csv
-// java DataProcessor noscale.200g.true  > noscale.200g.true.csv
-// java DataProcessor noscale.400g.500b  > noscale.400g.500b.csv
-// java DataProcessor noscale.50g.500b   >  noscale.50g.500b.csv
-// java DataProcessor noscale.800g.500b  >  noscale.800g.500b.csv
-// java DataProcessor scale2d.200g.500b  >  scale2d.200g.500b.csv
-// java DataProcessor scale2u.200g.500b  >  scale2u.200g.500b.csv
-// java DataProcessor scale5d.200g.500b  >  scale5d.200g.500b.csv
+ java DataProcessor noscale.100g.500b  > noscale.100g.500b.csv
+ java DataProcessor noscale.200g.1000b > noscale.200g.1000b.csv
+ java DataProcessor noscale.200g.250b  > noscale.200g.250b.csv
+ java DataProcessor noscale.200g.500b  > noscale.200g.500b.csv
+ java DataProcessor noscale.200g.true  > noscale.200g.true.csv
+ java DataProcessor noscale.400g.500b  > noscale.400g.500b.csv
+ java DataProcessor noscale.50g.500b   >  noscale.50g.500b.csv
+ java DataProcessor noscale.800g.500b  >  noscale.800g.500b.csv
+ java DataProcessor scale2d.200g.500b  >  scale2d.200g.500b.csv
+ java DataProcessor scale2u.200g.500b  >  scale2u.200g.500b.csv
+ java DataProcessor scale5d.200g.500b  >  scale5d.200g.500b.csv
 
 
 class Replicate {
     int astralQS;
     int mrlQS;
-    int qfmQS;
+    int dcm2QfmQS;
+    int dcm5QfmQS;
 
-    int qfmBestInd;
+    int dcm2QfmBestInd;
+    int dcm5QfmBestInd;
 
     double astralFN;
     double mrlFN;
-    double qfmFN;
+    double dcm2qfmFN;
+    double dcm5qfmFN;
 
     public String toString() {
         return "" +
-               mrlQS    + "," + mrlFN    + "," +
-               astralQS + "," + astralFN + "," +
-               qfmQS    + "," + qfmFN    ;
+               mrlQS     + "," + mrlFN     + "," +
+               astralQS  + "," + astralFN  + "," +
+               dcm2QfmQS + "," + dcm2qfmFN + "," +
+               dcm5QfmQS + "," + dcm5qfmFN ;
     }
 }
 
 public class DataProcessor {
 
     final static int MAX_REPLICATES = 20;
-    final static int MAX_ITER = 2;
 
     static Replicate[] _replicate = new Replicate[MAX_REPLICATES];
     static int _nReplicates = 0;
@@ -79,15 +82,17 @@ public class DataProcessor {
                 strLine = qsReader.readLine();
                 _replicate[_nReplicates].mrlQS = Integer.parseInt(strLine.split(",")[1]);
 
-                _replicate[_nReplicates].qfmQS = 0;
-                _replicate[_nReplicates].qfmBestInd = 0;
                 for (i = 0; i < 5; i++) {
                     strLine = qsReader.readLine();
 
                     int t = Integer.parseInt(strLine.split(",")[1]);
-                    if (i < MAX_ITER && t > _replicate[_nReplicates].qfmQS) {
-                        _replicate[_nReplicates].qfmQS = t;
-                        _replicate[_nReplicates].qfmBestInd = i;
+                    if (i < 2 && t > _replicate[_nReplicates].dcm2QfmQS) {
+                        _replicate[_nReplicates].dcm2QfmQS = t;
+                        _replicate[_nReplicates].dcm2QfmBestInd = i;
+                    }
+                    if (i < 5 && t > _replicate[_nReplicates].dcm5QfmQS) {
+                        _replicate[_nReplicates].dcm5QfmQS = t;
+                        _replicate[_nReplicates].dcm5QfmBestInd = i;
                     }
                 }
 
@@ -111,8 +116,11 @@ public class DataProcessor {
 
                 for (i = 0; i < 5; i++) {
                     strLine = fnReader.readLine();
-                    if (_replicate[_nReplicates].qfmBestInd == i) {
-                        _replicate[_nReplicates].qfmFN = Double.parseDouble(strLine.split(",")[2]);
+                    if (_replicate[_nReplicates].dcm2QfmBestInd == i) {
+                        _replicate[_nReplicates].dcm2qfmFN = Double.parseDouble(strLine.split(",")[2]);
+                    }
+                    if (_replicate[_nReplicates].dcm5QfmBestInd == i) {
+                        _replicate[_nReplicates].dcm5qfmFN = Double.parseDouble(strLine.split(",")[2]);
                     }
                 }
 
@@ -122,7 +130,7 @@ public class DataProcessor {
                 _nReplicates++;
             }
 
-            System.out.println("R_ID,MRL_QS,MRL_FN,ASTRAL_QS,ASTRAL_FN,QFM_QS,QFM_FN");
+            System.out.println("R_ID,MRL_QS,MRL_FN,ASTRAL_QS,ASTRAL_FN,DCM2QFM_QS,DCM2QFM_FN,DCM5QFM_QS,DCM5QFM_FN");
             for (i = 0; i < _nReplicates; i++) {
                 System.out.println("" + (i+1) + "," + _replicate[i]);
             }
