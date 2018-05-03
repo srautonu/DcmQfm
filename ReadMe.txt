@@ -1,11 +1,15 @@
 python runWMRP_nam.py -i <gene tree file> -o <outputfile> -d <output-directory> -r true
 
 for f in $(ls); do
-  echo $f
+  cp $f/outFN.txt ../temp/fn_$f.txt
 done
 
 for i in `seq 1 20`; do
   ./fnTrees.sh ../results/MRP_15_01/noscale.100g.500b/R$i/ ../data/mammals/true.tre
+done
+
+for model in $(ls $HOME/Research/dcm/data/ASTRAL-II/true-specis-trees); do
+  echo $model
 done
 
 Running MRP:
