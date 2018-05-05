@@ -64,6 +64,8 @@ PAUP and mrp.jar must be in the same folder as the python script
 
 newick modified package (1.3.1) was taken from Bayzid's local copy. The ones hosted in Github or other places did not work.
 
+spruce was also taken from Bayzid's local copy
+
 # To resolve non-binary, run the following on the new sp tree. This generates new_sp_tree.resolved
 python arb_resolve_polytomies_new.py new_sp_tree
 

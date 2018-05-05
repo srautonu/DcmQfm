@@ -5,17 +5,17 @@ import java.io.IOException;
 //
 // Model conditions are as follows:
 //
- java DataProcessor noscale.100g.500b  > noscale.100g.500b.csv
- java DataProcessor noscale.200g.1000b > noscale.200g.1000b.csv
- java DataProcessor noscale.200g.250b  > noscale.200g.250b.csv
- java DataProcessor noscale.200g.500b  > noscale.200g.500b.csv
- java DataProcessor noscale.200g.true  > noscale.200g.true.csv
- java DataProcessor noscale.400g.500b  > noscale.400g.500b.csv
- java DataProcessor noscale.50g.500b   >  noscale.50g.500b.csv
- java DataProcessor noscale.800g.500b  >  noscale.800g.500b.csv
- java DataProcessor scale2d.200g.500b  >  scale2d.200g.500b.csv
- java DataProcessor scale2u.200g.500b  >  scale2u.200g.500b.csv
- java DataProcessor scale5d.200g.500b  >  scale5d.200g.500b.csv
+// java DataProcessor noscale.100g.500b  > noscale.100g.500b.csv
+// java DataProcessor noscale.200g.1000b > noscale.200g.1000b.csv
+// java DataProcessor noscale.200g.250b  > noscale.200g.250b.csv
+// java DataProcessor noscale.200g.500b  > noscale.200g.500b.csv
+// java DataProcessor noscale.200g.true  > noscale.200g.true.csv
+// java DataProcessor noscale.400g.500b  > noscale.400g.500b.csv
+// java DataProcessor noscale.50g.500b   >  noscale.50g.500b.csv
+// java DataProcessor noscale.800g.500b  >  noscale.800g.500b.csv
+// java DataProcessor scale2d.200g.500b  >  scale2d.200g.500b.csv
+// java DataProcessor scale2u.200g.500b  >  scale2u.200g.500b.csv
+// java DataProcessor scale5d.200g.500b  >  scale5d.200g.500b.csv
 
 
 class Replicate {
