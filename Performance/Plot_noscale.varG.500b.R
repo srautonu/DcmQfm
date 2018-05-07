@@ -9,7 +9,7 @@ library(ggplot2)
 algoNames = c("MRL", "ASTRAL", "DCM2QFM", "DCM5QFM");
 geneTrees = c("50", "100", "200", "400", "800");
 
-algoNames2 = c("MRL", "ASTRAL", "QFM(DACTAL,2)", "QFM(DACTAL,5)");
+algoNames2 = c("MRP", "ASTRAL", "QFM(DACTAL,2)", "QFM(DACTAL,5)");
 
 fnData = NULL;
 
