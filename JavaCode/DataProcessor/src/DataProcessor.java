@@ -20,7 +20,7 @@ import java.io.IOException;
 
 class Replicate {
     int astralQS;
-    int mrlQS;
+    int mrpQS;
     int dcm2QfmQS;
     int dcm5QfmQS;
 
@@ -28,13 +28,13 @@ class Replicate {
     int dcm5QfmBestInd;
 
     double astralFN;
-    double mrlFN;
+    double mrpFN;
     double dcm2qfmFN;
     double dcm5qfmFN;
 
     public String toString() {
         return "" +
-               mrlQS     + "," + mrlFN     + "," +
+                mrpQS + "," + mrpFN + "," +
                astralQS  + "," + astralFN  + "," +
                dcm2QfmQS + "," + dcm2qfmFN + "," +
                dcm5QfmQS + "," + dcm5qfmFN ;
@@ -78,9 +78,9 @@ public class DataProcessor {
                 // Ignore the replicate id and header
                 qsReader.readLine();
 
-                // Get the quartet score of the MRL guide tree
+                // Get the quartet score of the MRP guide tree
                 strLine = qsReader.readLine();
-                _replicate[_nReplicates].mrlQS = Integer.parseInt(strLine.split(",")[1]);
+                _replicate[_nReplicates].mrpQS = Integer.parseInt(strLine.split(",")[1]);
 
                 for (i = 0; i < 5; i++) {
                     strLine = qsReader.readLine();
@@ -110,9 +110,9 @@ public class DataProcessor {
                 // Ignore the replicate id and header
                 fnReader.readLine();
 
-                // Get the quartet score of the MRL guide tree
+                // Get the quartet score of the MRP guide tree
                 strLine = fnReader.readLine();
-                _replicate[_nReplicates].mrlFN = Double.parseDouble(strLine.split(",")[2]);
+                _replicate[_nReplicates].mrpFN = Double.parseDouble(strLine.split(",")[2]);
 
                 for (i = 0; i < 5; i++) {
                     strLine = fnReader.readLine();
@@ -130,7 +130,7 @@ public class DataProcessor {
                 _nReplicates++;
             }
 
-            System.out.println("R_ID,MRL_QS,MRL_FN,ASTRAL_QS,ASTRAL_FN,DCM2QFM_QS,DCM2QFM_FN,DCM5QFM_QS,DCM5QFM_FN");
+            System.out.println("R_ID,MRP_QS,MRP_FN,ASTRAL_QS,ASTRAL_FN,DCM2QFM_QS,DCM2QFM_FN,DCM5QFM_QS,DCM5QFM_FN");
             for (i = 0; i < _nReplicates; i++) {
                 System.out.println("" + (i+1) + "," + _replicate[i]);
             }
