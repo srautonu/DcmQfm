@@ -5,10 +5,10 @@ export PATH=$PATH:$HOME/Research/dcm/standard-RAxML-master
 
 # Command line parameters
 expFolder=$1
-startingTree=$2
-trueTree=$3
 
-geneTree=Best.1
+geneTree=genetrees.resolved
+trueTree=trueSPTree
+startingTree=mrp.tre
 
 
 # DCM parameters
@@ -48,7 +48,7 @@ for i in `seq $((completedIterations+1)) $maxIteration`; do
     ./quartet-controller.sh $iterationFolder/$geneTree.subsets.$j $iterationFolder/quartets.$j
   done
 
-  # Run WQFM on each set of quartets 
+   Run WQFM on each set of quartets 
   for j in `seq 1 $nSubsets`; do
     bin/wqfm $iterationFolder/quartets.$j $iterationFolder/qfmTree.$j
   done
@@ -67,6 +67,6 @@ done
 ./scoreTrees.sh $expFolder $geneTree
 
 # Calculate the Fn score
-./fnTrees.sh $expFolder $trueTree
+./fnTrees.sh $expFolder $expFolder/$trueTree
 
 

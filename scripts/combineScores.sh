@@ -6,10 +6,10 @@ resultFile=$inputFolder/out.txt
 echo Results will be stored in $resultFile
 
 rm -f $resultFile
-for i in `seq 1 20`; do 
-  echo ==== R$i ==== >> $resultFile 
-  cat $inputFolder/R$i/score.csv >> $resultFile
-  cat $inputFolder/R$i/astralScore.csv >> $resultFile
+for i in $(seq -f "%02g" 1 20); do
+  echo ==== $i ==== >> $resultFile 
+  cat $inputFolder/$i/score.csv >> $resultFile
+  cat $inputFolder/$i/astralScore.csv >> $resultFile
 done
 
 
