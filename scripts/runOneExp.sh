@@ -6,7 +6,7 @@ export PATH=$PATH:$HOME/Research/dcm/standard-RAxML-master
 # Command line parameters
 expFolder=$1
 
-geneTree=genetrees.resolved
+geneTree=genetrees
 trueTree=trueSPTree
 startingTree=mrp.tre
 
