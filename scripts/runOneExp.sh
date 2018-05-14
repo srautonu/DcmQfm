@@ -5,6 +5,8 @@ export PATH=$PATH:$HOME/Research/dcm/standard-RAxML-master
 
 # Command line parameters
 expFolder=$1
+subsetSize=$2
+paddingSize=$3
 
 geneTree=genetrees
 trueTree=trueSPTree
@@ -12,8 +14,6 @@ startingTree=mrp.tre
 
 
 # DCM parameters
-subsetSize=15
-paddingSize=1
 maxIteration=5
 completedIterations=0
 
