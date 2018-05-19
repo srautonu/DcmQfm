@@ -2160,9 +2160,9 @@ int main(int argc, char *argv[])
 
 	time_t t2 = time(NULL);
 
-	/*int f = s.find('O');
+	int f = s.find('O');
 	if(f>=0)
-		s.replace(f,1,"0");*/
+		s.replace(f,1,"0");
 
 	cout<<"("<<s<<");"<<endl;
 	diff = difftime(t2,t1);
