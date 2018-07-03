@@ -1,0 +1,5 @@
+noscale.800g.500b --> no wqfm data
+
+noscale.400g.500b -- > only for first 10 replicates
+noscale.200g.tru --> no wqfm data
+noscale.200g.250b --> no wqfm data

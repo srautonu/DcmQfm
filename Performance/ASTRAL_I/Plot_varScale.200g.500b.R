@@ -9,7 +9,7 @@ library(ggplot2)
 algoNames = c("MRL", "ASTRAL", "DCM2QFM", "DCM5QFM");
 ILS = c("scale5d", "scale2d", "noscale", "scale2u");
 
-algoNames2 = c("MRP", "ASTRAL", "QFM(DACTAL,2)", "QFM(DACTAL,5)");
+algoNames2 = c("MRP", "ASTRAL", "DCM2-QFM", "DCM5-QFM");
 ILS2 = c("0.2X", "0.5X", "1X", "2X");
 
 fnData = NULL;
