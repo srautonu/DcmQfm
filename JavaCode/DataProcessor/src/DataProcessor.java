@@ -29,6 +29,7 @@ class Replicate {
 
     double astralFN;
     double mrpFN;
+    double qfmFN;
     double dcm2qfmFN;
     double dcm5qfmFN;
 
@@ -37,7 +38,7 @@ class Replicate {
                 mrpQS + "," + mrpFN + "," +
                astralQS  + "," + astralFN  + "," +
                dcm2QfmQS + "," + dcm2qfmFN + "," +
-               dcm5QfmQS + "," + dcm5qfmFN ;
+               dcm5QfmQS + "," + dcm5qfmFN + "," + qfmFN;
     }
 }
 
@@ -124,19 +125,24 @@ public class DataProcessor {
                     }
                 }
 
+                // ASTRAL FN
                 strLine = fnReader.readLine();
                 _replicate[_nReplicates].astralFN = Double.parseDouble(strLine.split(",")[2]);
+
+                // QFM (native) FN
+                strLine = fnReader.readLine();
+                _replicate[_nReplicates].qfmFN = Double.parseDouble(strLine.split(",")[2]);
 
                 _nReplicates++;
             }
 
-//            System.out.println("R_ID,MRP_QS,MRP_FN,ASTRAL_QS,ASTRAL_FN,DCM2QFM_QS,DCM2QFM_FN,DCM5QFM_QS,DCM5QFM_FN");
-//            for (i = 0; i < _nReplicates; i++) {
-//                System.out.println("" + (i+1) + "," + _replicate[i]);
-//            }
+            System.out.println("R_ID,MRP_QS,MRP_FN,ASTRAL_QS,ASTRAL_FN,DCM2QFM_QS,DCM2QFM_FN,DCM5QFM_QS,DCM5QFM_FN,QFM_FN");
+            for (i = 0; i < _nReplicates; i++) {
+                System.out.println("" + (i+1) + "," + _replicate[i]);
+            }
 
             // To print the index of best tree of replicate 1
-            System.out.println("Model: " + args[0] + " DCM2QFM: " + (1+_replicate[0].dcm2QfmBestInd) + " DCM5QFM: " + (1+_replicate[0].dcm5QfmBestInd));
+            //System.out.println("Model: " + args[0] + " DCM2QFM: " + (1+_replicate[0].dcm2QfmBestInd) + " DCM5QFM: " + (1+_replicate[0].dcm5QfmBestInd));
 
         } catch (IOException e) {
             System.out.println(e);
