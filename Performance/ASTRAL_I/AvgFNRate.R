@@ -5,22 +5,22 @@
 #########################################################
 
 fileName = c(
-  "rtQFM_scale5d.200g.500b.txt",
-  "rtQFM_scale2d.200g.500b.txt",
-  "rtQFM_noscale.200g.500b.txt",
-  "rtQFM_scale2u.200g.500b.txt",
-  "rtQFM_noscale.50g.500b.txt",
-  "rtQFM_noscale.100g.500b.txt",
-  # "rtQFM_noscale.400g.500b.txt",
-  "rtQFM_noscale.800g.500b.txt",
-  "rtQFM_noscale.200g.250b.txt",
-  "rtQFM_noscale.200g.1000b.txt",
-  "rtQFM_noscale.200g.true.txt"
+  "scale5d.200g.500b.csv",
+  "scale2d.200g.500b.csv",
+  "noscale.200g.500b.csv",
+  "scale2u.200g.500b.csv",
+  "noscale.50g.500b.csv",
+  "noscale.100g.500b.csv",
+  "noscale.400g.500b.csv",
+  "noscale.800g.500b.csv",
+  "noscale.200g.250b.csv",
+  "noscale.200g.1000b.csv",
+  "noscale.200g.true.csv"
   );
 
 for (file in fileName) {
   
   data = read.csv(file);
-  avg = round(mean(data[,1]/60),2);
-  cat("", avg, "\n")
+  cat(file, " ", round(mean(data$QFM_FN),4), "\n")
+  
 }
