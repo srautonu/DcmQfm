@@ -6,7 +6,7 @@
 
 library(ggplot2)
 
-algoNames = c("MRL", "ASTRAL", "DCM2QFM", "DCM5QFM");
+algoNames = c("MRP", "ASTRAL", "DCM2QFM", "DCM5QFM");
 geneLengths = c("250b", "500b", "1000b", "true");
 
 algoNames2 = c("MRP", "ASTRAL", "DCM2-QFM", "DCM5-QFM");
@@ -41,7 +41,7 @@ plot = plot +
 
 
 postscript(file = "noscale_200g_varB.eps", paper = "letter");
-plot;
+print(plot + scale_fill_grey(start = 0, end = 0.6));
 dev.off();
 
 

@@ -6,7 +6,7 @@
 
 library(ggplot2)
 
-algoNames = c("MRL", "ASTRAL", "DCM2QFM", "DCM5QFM");
+algoNames = c("MRP", "ASTRAL", "DCM2QFM", "DCM5QFM");
 ILS = c("scale5d", "scale2d", "noscale", "scale2u");
 
 algoNames2 = c("MRP", "ASTRAL", "DCM2-QFM", "DCM5-QFM");
@@ -40,7 +40,7 @@ plot = plot +
     labs(x = "species tree branch length", y = "FN rate")
 
 postscript(file = "varScale_200g_500b.eps", paper = "letter");
-plot;
+print(plot + scale_fill_grey(start = 0, end = 0.6));
 dev.off();
 
 

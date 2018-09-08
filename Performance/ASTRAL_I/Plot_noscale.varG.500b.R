@@ -6,7 +6,7 @@
 
 library(ggplot2)
 
-algoNames = c("MRL", "ASTRAL", "DCM2QFM", "DCM5QFM");
+algoNames = c("MRP", "ASTRAL", "DCM2QFM", "DCM5QFM");
 geneTrees = c("50", "100", "200", "400", "800");
 
 algoNames2 = c("MRP", "ASTRAL", "DCM2-QFM", "DCM5-QFM");
@@ -39,7 +39,7 @@ plot = plot +
     labs(x = "number of gene trees", y = "FN rate")
 
 postscript(file = "noscale_varG_500b.eps", paper = "letter");
-plot;
+print(plot + scale_fill_grey(start = 0, end = 0.6));
 dev.off();
 
 
